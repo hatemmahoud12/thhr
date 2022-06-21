@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cairo;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+p{
+    font-size: 16px;
+    color:#465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body{
+    width: 100%;
+}
+/** some transitions **/
+
+/** fade transition **/
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+      10%{
+        opacity: 0.1;
+    }  20%{
+        opacity: 0.2;
+    }  30%{
+        opacity: 0.3;
+    }  40%{
+        opacity: 0.4;
+    }  50%{
+        opacity: 0.5;
+    }  60%{
+        opacity: 0.6;
+    }  70%{
+        opacity: 0.7;
+    }  80%{
+        opacity: 0.8;
+    }  90%{
+        opacity: 0.9;
+    }  100%{
+        opacity: 1;
+    }
+}
+
+
+/** move transition **/
+@keyframes move{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+/**header**/
+#header{
+      display: flex;/**لو عايز تخليهم في النص امسح اول ستر  وي حط ال/ img جوا الnav **/
+align-items:center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #F5F5F5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left:0;
+}
+.logo{
+    width: 50px;
+    animation: move 1s linear;
+}
+#nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: move 1s linear;
+}
+#nav-bar i{
+    font-size: 20px;
+}
+#nav-bar li{
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+}
+#nav-bar li a{
+    text-decoration: none;
+    color: #06283D;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+#nav-bar li a:hover,#nav-bar li a.active{
+    color: #1363DF;
+}
+
+#nav-bar li a.active::after,#nav-bar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #1363DF;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/** hero section **/
+
+#hero{
+    background-image: url(images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90.2vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#hero h4{
+    padding-bottom: 15px;
+    animation: fade 1s linear;
+}
+#hero h1{
+    color: #1363DF;    
+    animation: fade 1s linear;
+
+}
+#hero h2{
+    animation: fade 1s linear;
+
+}
+#hero p{
+    animation: fade 1s linear;
+}
+#hero button{
+    animation: fade  1s linear;
+    background-color: #1363DF;/**#088178*/
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:15px;
+    padding-bottom:15px;
+    align-items: center;
+    border-radius: 5px;
+    border: #1363DF solid 3px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+#hero button:hover{
+    background-color: transparent;
+    color: #1363DF;
+}
+
+/** fauture **/
+#fauture{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#fauture .fe-box{
+    width:180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border:1px solid #f5f5f5;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+#fauture .fe-box img{
+    width:100%;
+    margin-bottom: 10px;
+}
+#fauture .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    background-color:#1363DF; 
+}
+/** product1 **/
+#product1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #06283D;
+}
+#product1 .pro-container {
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#product1 h2{
+    color: #47B5FF;
+    text-align: left;
+}
+#product1 p{
+    color: white;
+    text-align: right;
+}
+#product1 .pro{
+    width: 23%;
+    min-width:250px;
+    padding: 10px 12px;
+    border: 1px solid #f5f5f5;
+    border-radius: 25px;
+    cursor: pointer;
+    background: white;
+    box-shadow: 20px 20px 34px rgba(255,255,255,0.3);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product1 .pro :hover{
+    /**transform: scale(1.1);**/
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #0606063;
+    font-size: 12px;
+}
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color:black ;
+    font-size: 14px;
+}
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgba(243,181,25);
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#1363DF;
+}
+#product1 .pro .cart{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #DFF6FF;
+    font-weight: 500;
+    color: #1363DF;
+    border: 1px solid #DFF6FF;
+    position: absolute;
+    bottom: 20px;
+    right:10px;
+}
+/** footer **/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+footer .logo{
+     margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color:#1363DF;
+}
+footer .col-payment img{
+    margin:10px 0 15px 0;
+}
+
+/** responsive **/
+@media (max-width:799px){
+   /**nav bar**/
+    #header{
+        padding: 10px 30px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    #hero{
+        padding: 0 20px;
+        background-position: 50%;
+    }
+    .section-p1{
+    padding: 30px 40px;
+}
+    #feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    #feature .fe-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    #product1 .pro{
+        width: 100%;
+    }
+}
